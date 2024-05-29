@@ -2,3 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --foreground-rgb: #64748b;
+  --background-start-rgb: #64748b;
+  --background-end-rgb: #bae6fd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: #64748b;
+    --background-start-rgb: #64748b;
+    --background-end-rgb: #bae6fd;
+  }
+}
+
+body {
+  background-image: linear-gradient(
+      to right,
+      var(--background-start-rgb), var(--background-end-rgb)
+    )
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
